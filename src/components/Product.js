@@ -44,11 +44,11 @@ class Product extends Component {
 
     showRatings = (rating) => {
         var result = [];
-        for (let index = 1; index <= rating; index++) {
-            result.push(<i className="fa fa-star"></i>);
+        for (let i = 1; i <= rating; i++) {
+            result.push(<i key={i} className="fa fa-star"></i>);
         }
-        for (let index = 1; index <= 5 - rating; index++) {
-            result.push(<i className="fa fa-star-o"></i>);
+        for (let j = 1; j <= 5 - rating; j++) {
+            result.push(<i key={6 - j} className="fa fa-star-o"></i>);
         }
         return result;
     }
