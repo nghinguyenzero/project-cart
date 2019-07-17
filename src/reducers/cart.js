@@ -1,7 +1,6 @@
 import * as Types from './../constants/ActionType';
 var data = JSON.parse(localStorage.getItem('CART'));
-var inittialState = data ? data:[
-];
+var inittialState = data ? data:[];
 
 const cart = (state = inittialState, action) => {
     var { product, quantity } = action;
