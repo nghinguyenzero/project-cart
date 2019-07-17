@@ -8,8 +8,8 @@ class ProductsContainer extends Component {
     render() {
         var { products } = this.props;
         return (
-            <Products>
-                {this.showProducts(products)} //Truyền vào dạng children
+            <Products> 
+                {this.showProducts(products)} 
             </Products>
         );
     }

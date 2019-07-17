@@ -12,6 +12,18 @@ var inittialState = [
             rating: 4
         },
         quantity: 5
+    },
+    {
+        product:     {
+            id: 3,
+            name: 'Xperia XZ',
+            image: 'https://dienmaycholon.vn/public/picture/product/product11282/big/product_11282_1.png',
+            description: 'Đây là sản phẩn so Sony sản xuất',
+            price: 500,
+            inventory: 20,
+            rating: 3
+        },
+        quantity: 2
     }
 ];
 

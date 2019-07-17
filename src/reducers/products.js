@@ -25,6 +25,24 @@ var inittialState = [
         price: 500,
         inventory: 20,
         rating: 3
+    },
+    {
+        id: 4,
+        name: 'VSmart',
+        image: 'https://www.nguyenkim.com/images/thumbnails/250/250/detailed/590/10041955_VSMART_JOY-1_DEN_01.jpg',
+        description: 'Đây là sản phẩm do VinSmart sản xuất',
+        price: 150,
+        inventory: 12,
+        rating: 4
+    },
+    {
+        id: 5,
+        name: 'Nokia 8.1',
+        image: 'https://shopmrheo.com/image/cache/datamrheo/data/Nokia/logo/nokia8.1w250-250x250.png',
+        description: 'Đây là sản phẩn so Nokia sản xuất',
+        price: 200,
+        inventory: 4,
+        rating: 2
     }
 ];
 

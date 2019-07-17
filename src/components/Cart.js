@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import CartItem from "./CartItem";
-import CartResult from "./CartResult";
-
-
 
 class Cart extends Component {
     render() {
+        var {children}= this.props;
         return (
             <section className="section">
                 <div className="table-responsive">
@@ -21,14 +18,11 @@ class Cart extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <CartItem></CartItem>
-                            <CartItem></CartItem>
-                            <CartResult></CartResult>
+                            {children}
                         </tbody>
                     </table>
                 </div>
             </section>
-
         );
     }
 
