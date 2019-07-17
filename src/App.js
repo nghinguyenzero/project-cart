@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Message from "./components/Message";
-import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProductsContainer from './containers/ProductsContainer';
+import CartContainer from './containers/CartContainer';
 
-// function App() {
+
 class App extends Component {
     render() {
         return (
@@ -15,19 +15,18 @@ class App extends Component {
                 <main id="mainContainer">
                     <div className="container">
                         {/* <!-- Products --> */}
-                        <ProductsContainer/>
+                        <ProductsContainer />
                         {/* <!-- Message --> */}
                         <Message></Message>
                         {/* <!-- Cart --> */}
-                        <Cart></Cart>
+                        <CartContainer />
                     </div>
                 </main>
                 {/* <!-- Footer --> */}
                 <Footer></Footer>
-                </div>
+            </div>
         );
     }
-
 }
 
 export default App;
