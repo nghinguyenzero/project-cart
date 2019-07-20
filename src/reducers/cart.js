@@ -31,6 +31,7 @@ const cart = (state = inittialState, action) => {
                 state[index].quantity = quantity;
             }
             localStorage.setItem('CART', JSON.stringify(state));
+            return [...state];
         default: return [...state]; // the spread syntax(cú pháp lây lan) to insert the mid array into the arr array
     }
 }

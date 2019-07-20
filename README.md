@@ -1,7 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
+## Note project
 App
     Header
     Products
@@ -14,7 +11,22 @@ App
         CartResult
     Footer
 
+REDUX:
+`Store`: chứa các `state`
+`Reducer` là func, nhận vào các `action` và `state` -> trả ra `state` mới cho `Store`
 
+Thực hiện `action`: `store` gọi tới `func dispatcher` để gửi `action` vào `reducer`
+
+
+
+
+
+
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
 
 In the project directory, you can run:
 
