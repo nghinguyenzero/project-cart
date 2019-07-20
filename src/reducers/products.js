@@ -48,10 +48,7 @@ var inittialState = [
 
 const products = (state = inittialState, action) => {
     switch (action.type) {
-        // case value:
-        //     break;
         default: return [...state]; // the spread syntax(cú pháp lây lan) to insert the mid array into the arr array
-            break;
     }
 }
 

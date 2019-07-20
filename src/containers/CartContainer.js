@@ -6,10 +6,12 @@ import CartItem from './../components/CartItem';
 import CartResult from './../components/CartResult';
 
 import * as Message from './../constants/Message';
+import { actDeleteProductInCart, actChangeMessage } from "./../actions/index";
 
 class CartContainer extends Component {
     render() {
         var { cart } = this.props;
+
         console.log(cart);
         return (
             <Cart>
@@ -20,10 +22,16 @@ class CartContainer extends Component {
     }
 
     showCartItem = (cart) => {
-        var result =<tr><td>{Message.MSG_CART_EMPTY}</td></tr> ;
+        var { onDeleteProductInCart, onChangeMessage } = this.props;
+        var result = <tr><td>{Message.MSG_CART_EMPTY}</td></tr>;
         if (cart.length > 0) {
             result = cart.map((item, index) => {
-                return <CartItem key={index} item={item} index={index} />
+                return (
+                    <CartItem key={index} item={item} index={index}
+                        onDeleteProductInCart={onDeleteProductInCart}
+                        onChangeMessage={onChangeMessage}
+                    />
+                );
             });
         }
         return result;
@@ -61,4 +69,15 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(CartContainer); //The connect() function connects a React component to a Redux store.
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        onDeleteProductInCart: (product) => {
+            dispatch(actDeleteProductInCart(product));
+        },
+        onChangeMessage: (message) => {
+            dispatch(actChangeMessage(message));
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartContainer); //The connect() function connects a React component to a Redux store.
