@@ -47,20 +47,16 @@ ProductsContainer.propTypes = { //Kiểm tra kiểu các phần tử trong state
     onChangeMessage: PropTypes.func.isRequired
 }
 
-const mapStateToProps = state => { //là một filter sử dụng để lấy những state trong store -> props mà component yêu cầu
+const mapStateToProps = state => { //filter and select các state trong store -> props của component
     return {
-        products: state.products //reducer/index
+        products: state.products
     }
 }
 
 const mapDispatchToProps = (dispatch, props) => { //mapDispatchToProps is used for dispatching actions to the store, dispatch is a function of the Redux store
     return {
-        onAddToCart: (product) => {
-            dispatch(actAddToCart(product, 1));
-        },
-        onChangeMessage: (message) => {
-            dispatch(actChangeMessage(message));
-        }
+        onAddToCart: (product) => dispatch(actAddToCart(product, 1)),
+        onChangeMessage: (message) => dispatch(actChangeMessage(message))
     }
 }
 

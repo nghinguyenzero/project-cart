@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <div>
                 {/* <!-- Header --> */}
-                <Header></Header>
+                <Header/>
                 <main id="mainContainer">
                     <div className="container">
                         {/* <!-- Products --> */}
@@ -21,8 +21,9 @@ class App extends Component {
                         <CartContainer />
                     </div>
                 </main>
+
                 {/* <!-- Footer --> */}
-                <Footer></Footer>
+                <Footer/>
             </div>
         );
     }

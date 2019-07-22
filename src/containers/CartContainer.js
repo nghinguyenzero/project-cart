@@ -69,15 +69,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onDeleteProductInCart: (product) => {
-            dispatch(actDeleteProductInCart(product));
-        },
-        onChangeMessage: (message) => {
-            dispatch(actChangeMessage(message));
-        },
-        onUpdateProductInCart: (product, quantity) => {
-            dispatch(actUpdateProductInCart(product, quantity));
-        }
+        onDeleteProductInCart: (product) => dispatch(actDeleteProductInCart(product)),
+        onChangeMessage: (message) => dispatch(actChangeMessage(message)),
+        onUpdateProductInCart: (product, quantity) => dispatch(actUpdateProductInCart(product, quantity))
     }
 }
 
