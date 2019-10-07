@@ -11,6 +11,4 @@ const message = (state = inittialState, action) => {
     }
 }
 
-
-
 export default message;

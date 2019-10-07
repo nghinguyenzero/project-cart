@@ -10,7 +10,6 @@ class Message extends Component {
             </h3>
         );
     }
-
 }
 
 export default Message;

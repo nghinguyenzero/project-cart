@@ -2,7 +2,7 @@ var inittialState = [
     {
         id: 1,
         name: 'Iphone X',
-        image: 'http://2tmobile.com.vn/image/cache/imgdata/Sanpham/dien_thoai/Apple/iphone-x-fix/apple-iphone-x-256gb-silver-250x250.jpg',
+        image: 'https://img.sam.vn/public/upload/thumbnail/250x250/dien-thoai-samsung-galaxy-note-8-hang-chinh-hang1527734658804.jpeg',
         description: 'Đây là sản phẩm do Apple sản xuất',
         price: 1000,
         inventory: 10,
@@ -48,7 +48,7 @@ var inittialState = [
 
 const products = (state = inittialState, action) => {
     switch (action.type) {
-        default: return [...state]; // the spread syntax(cú pháp lây lan) to insert the mid array into the arr array
+        default: return [...state];     
     }
 }
 
